@@ -1,8 +1,10 @@
 # Python Rate Limiter
 
 ## Authors
-Sean Ippolito
+Sean Ippolito 
+<br>
 Sean Celik
+<br>
 Sean Pearce
 
 ## Goals
