@@ -7,6 +7,17 @@ Sean Celik
 <br>
 Sean Pearce
 
+## Setup
+
+Install `pyenv` for your operating system to control the python version `3.12.1` which will be used for this project. The .python-version file controls the current version of python we are using.
+
+Run the command to install the local virtualenv `python -m venv .venv`
+
+To install new pip packages run  `pip install -r requirements.txt`
+
+If you are using an IDE other than VSCode, like pycharm, make sure to include the IDE specific settings folder in the .gitignore
+
+
 ## Goals
 Implement a simple rate limiter in python with a UI that can toggle between 5 different techniques.
 
