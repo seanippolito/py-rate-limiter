@@ -18,3 +18,7 @@ Unit tests and stress testing will also be applied to tests large requests.
 
 Future developement would entail running this in a multi server cloud based environment.
 
+Refer to issues for work that needs to be done.
+
+Refer to project board for and wiki for additonal details on development. 
+
