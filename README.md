@@ -46,19 +46,19 @@ server-py/
 
 ##### Client (Next.js)
 
-Navigate to the Client directory.
-<br> Run npm install to install dependencies.
-<br>Start the development server with npm run dev.
-<br>Open http://localhost:3000 in your browser to access the application.
+1. Navigate to the Client directory.
+2. Run npm install to install dependencies.
+3. Start the development server with npm run dev.
+4. Open http://localhost:3000 in your browser to access the application.
 
 ##### Server (Python)
 
-Navigate to the server-py directory.
-<br>Create a virtual environment with python -m venv .venv.
-<br>Activate the virtual environment:
-<br>Linux/Mac: source .venv/bin/activate
-<br>Windows: .venv\Scripts\activate
-<br>Install required packages with pip install -r requirements.txt.
+1. Navigate to the server-py directory.
+2. Create a virtual environment with python -m venv .venv.
+3. Activate the virtual environment:
+    * Linux/Mac: source .venv/bin/activate
+    * Windows: .venv\Scripts\activate
+4. Install required packages with pip install -r requirements.txt.
 
 
 
