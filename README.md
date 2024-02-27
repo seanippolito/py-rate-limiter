@@ -37,7 +37,7 @@ server-py/
 ├── .gitignore
 ├── .python-version
 ├── README.md
-├── _main_.py
+├── __main__.py
 └── requirements.txt
 ```
 
