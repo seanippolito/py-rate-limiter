@@ -1,6 +1,7 @@
 import sys
 import requests 
 from requests.auth import HTTPBasicAuth 
+from flask import Flask
 print(f"Hello, I'm Python Version {sys.version}")
 
 # Making a GET request 
@@ -50,14 +51,23 @@ print(f"Hello, I'm Python Version {sys.version}")
 # print(response) 
 # print(response.content)
 
-# create a session object 
-s = requests.Session() 
+# # create a session object 
+# s = requests.Session() 
   
-# make a get request 
-s.get('https://api.github.com/cookies/set/sessioncookie/123456789') 
+# # make a get request 
+# s.get('https://api.github.com/cookies/set/sessioncookie/123456789') 
   
-# again make a get request 
-r = s.get('https://api.github.com/cookies') 
+# # again make a get request 
+# r = s.get('https://api.github.com/cookies') 
   
-# check if cookie is still set 
-print(r.text) 
+# # check if cookie is still set 
+# print(r.text) 
+
+app = Flask(__name__)
+
+@app.route("/")
+def main():
+    return "<p>Hello, World!</p>"
+
+if __name__ == '__main__':
+    app.run(debug=True)
