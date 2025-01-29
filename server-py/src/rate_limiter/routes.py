@@ -1,5 +1,5 @@
-from src.extensions import mongo
-from src.rate_limiter import rate_limiter
+from extensions import mongo
+from rate_limiter import rate_limiter
 from flask import jsonify
 from datetime import datetime
 
@@ -10,9 +10,9 @@ def get_data(data):
 @rate_limiter.route("/user")
 def add_user():
     new_user = {
-        "first_name": "Sean",
-        "last_name": "Ippolito",
-        "email": "ippolitosean@gmail.com",
+        "first_name": "Tom",
+        "last_name": "Foolory",
+        "email": "tifff@gmail.com",
         "date": datetime.now(),
     }
 

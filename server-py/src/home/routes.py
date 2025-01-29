@@ -1,6 +1,6 @@
-from src.home import home
+from home import home
 from flask import Flask, render_template, request, url_for, redirect
-from src.extensions import mongo
+from extensions import mongo
 
 @home.route('/', methods=('GET', 'POST'))
 def index():
