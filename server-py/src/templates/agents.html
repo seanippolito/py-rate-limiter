@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AIAgents</title>
+    <style>
+        .todo {
+            padding: 20px;
+            margin: 10px;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your personal AI Agent</h1>
+    <hr>
+    <div class="content">
+    <form method="post">
+        <p>
+            <b><label for="content">Ask your personal assistant a question?</label></b>
+        </p>
+        <p>
+            <input type="text" name="content"
+                placeholder="Start cookin..."></input>
+        </p>
+
+        <button type="submit">Submit</button>
+    </form>
+    <hr>
+    {% for response in responses %}
+        <div class="todo">
+            <p>{{ response['content'] }}</p>
+        </div>
+    {% endfor %}
+
+    </div>
+</body>
+</html>
