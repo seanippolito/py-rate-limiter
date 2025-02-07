@@ -9,7 +9,7 @@ Sean Pearce
 
 ## Setup
 
-Youtube tutorial https://www.youtube.com/watch?v=HTx18uyyHw8&t=1s testin devleop
+Youtube tutorial https://www.youtube.com/watch?v=HTx18uyyHw8&t=1s 
 
 Install `pyenv` for your operating system to control the python version `3.12.1` which will be used for this project. The .python-version file controls the current version of python we are using.
 
