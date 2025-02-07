@@ -7,23 +7,6 @@ def get_data(data):
      data['_id'] = str(data['_id'])
      return data
 
-@rate_limiter.route("/user")
-def add_user():
-    new_user = {
-        "first_name": "Tom",
-        "last_name": "Foolory",
-        "email": "tifff@gmail.com",
-        "date": datetime.now(),
-    }
-
-    users = mongo.db.users
-    existing_user = users.find_one()
-    if not existing_user:
-        user_id = users.insert_one(new_user).inserted_id
-        print(user_id)
-    temp = [get_data(existing_user)]
-    return jsonify(temp)
-
 @rate_limiter.route("/pyarrow")
 def pyarrow():
     data = mongo.db.data
