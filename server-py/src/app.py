@@ -1,11 +1,14 @@
 from flask import Flask,render_template
-from extensions import mongo
+from extensions import mongo, client
 import os
 from dotenv import load_dotenv
 
 app = Flask(__name__)
 
 load_dotenv()
+
+client.api_key=os.getenv("OPENAI_API_KEY")
+
 
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 mongo.init_app(app)
@@ -19,7 +22,4 @@ app.register_blueprint(rate_limiter_bp)
 from agents import agents as agents_bp
 app.register_blueprint(agents_bp)
 
-@app.route('/')
-def test_page():
-    return '<h1>Testing the Flask Application Factory Pattern</h1>'
     
