@@ -15,7 +15,49 @@ Install `pyenv` for your operating system to control the python version `3.12.1`
 
 Run the command to install the local virtualenv `python -m venv .venv`
 
+You can validate you are in the correct venv by running the command `which python` in a bash terminal or alternatively `get-command python` in Windows Powershell. This command should point to the .venv path in this project directory.
+
+If you are using the VSCode there are a few steps to follow in order to setup your working env. You must select the interperter in `${workspaceFolder}\\server-py\\.venv\\Scripts\\python.exe`, alternatively you can set this in your `.vscode/settings.json` file like below 
+
+```
+{
+    "python.terminal.activateEnvironment": true,
+}
+```
+
+
+You may also want to create a `launch.json` file in the `.vscode` directory in order to launch the project from the IDE's debugger. Below is the recommended settings for this file
+
+```
+"configurations": [
+        
+        {
+            "name": "Python Debugger: Flask",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "flask",
+            "env": {
+                "FLASK_APP": "src/app.py",
+                "FLASK_ENV": "development",
+                "FLASK_DEBUG": "1"
+            },
+            "args": [
+                "run",
+                "--no-debugger",
+                "--no-reload"
+            ],
+            "jinja": true,
+            "justMyCode": false
+        },
+    ],
+```
+
 To install new pip packages run  `pip install -r requirements.txt`
+
+To run the server from an integrated terminal in the VSCode editor you must be in the `server-py/src` directory and run the following command 
+
+`python -m flask run`
+
 
 If you are using an IDE other than VSCode, like pycharm, make sure to include the IDE specific settings folder in the .gitignore
 
